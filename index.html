@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Feminina.fun — Ensaio Digital com IA | Suas fotos dos sonhos, sem sair de casa</title>
-<meta name="description" content="Ensaio fotográfico profissional gerado por IA a partir de uma simples selfie. Aniversário, corporativo, casal e Natal. 100% online, resultado profissional. Chame no WhatsApp.">
+<meta name="description" content="Seu aniversário merece fotos incríveis: ensaio fotográfico profissional com IA a partir de 1 selfie, sem fotógrafo, sem estúdio e sem sair de casa. Aniversário, corporativo, casal e Natal. Chame no WhatsApp.">
 <link rel="icon" type="image/png" href="assets/perfil.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +78,14 @@ section{padding:56px 0}
 h2{font-family:'Playfair Display',serif;font-size:1.9rem;text-align:center;margin-bottom:8px}
 .lead{text-align:center;color:var(--cinza);max-width:640px;margin:0 auto 32px}
 
+/* Dores / desejo */
+.dores{background:#fff}
+.dores-grid{display:grid;gap:18px}
+.dor{background:var(--rosa-fundo);border:1px solid var(--rosa-suave);border-left:5px solid var(--rose);border-radius:12px;padding:20px 22px;font-size:1rem}
+.dor strong{color:var(--rose-escuro)}
+.dores-fecha{text-align:center;font-family:'Playfair Display',serif;font-size:1.35rem;margin:28px auto 20px;max-width:640px}
+.dores-cta{text-align:center}
+
 /* Como funciona */
 .passos{display:grid;gap:18px}
 .passo{background:var(--rosa-fundo);border:1px solid var(--rosa-suave);border-radius:var(--raio);padding:24px;text-align:center}
@@ -102,6 +110,7 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;text-align:center;margi
 .pacote .qtd{font-weight:800;font-size:1.15rem}
 .pacote .preco{font-family:'Playfair Display',serif;font-size:2rem;color:var(--rose);font-weight:700}
 .pacote .detalhe{color:var(--cinza);font-size:.88rem;flex:1}
+.pacote .porfoto{font-weight:700;color:var(--rose-escuro);font-size:.92rem}
 .pacote .btn{margin-top:12px;min-height:48px;font-size:.95rem;padding:12px 18px}
 
 /* FAQ */
@@ -124,6 +133,7 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
 .wa-float:hover{background:var(--verde-escuro)}
 
 @media (min-width:760px){
+  .dores-grid{grid-template-columns:repeat(3,1fr)}
   .hero-grid{grid-template-columns:1.05fr .95fr}
   .hero h1{font-size:3rem}
   .passos{grid-template-columns:repeat(3,1fr)}
@@ -158,19 +168,36 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1>Suas fotos dos sonhos, <em>sem sair de casa</em></h1>
-        <p class="sub">Ensaio fotográfico profissional gerado com inteligência artificial, a partir de uma simples selfie. Você linda, em fotos de estúdio, sem precisar de estúdio.</p>
-        <span class="selo">Seu ensaio dos sonhos começa aqui</span>
+        <h1>Você merece se ver <em>deslumbrante</em></h1>
+        <p class="sub">Ensaio fotográfico profissional com inteligência artificial, a partir de uma selfie: <strong>sem fotógrafo, sem estúdio, sem maquiagem, sem sair de casa</strong>. Fotos de capa de revista, direto no seu WhatsApp.</p>
+        <span class="selo">🎂 Aniversário é o tema mais pedido</span>
         <ul class="checks">
-          <li>100% online — tudo pelo seu celular</li>
-          <li>Resultado profissional de estúdio</li>
+          <li>A partir de 1 selfie — você escolhe as poses pelo número</li>
+          <li>Sem fotógrafo, sem estúdio, sem sair de casa</li>
           <li>Entrega rápida, direto no seu WhatsApp</li>
         </ul>
-        <a class="btn btn-whats btn-grande" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20fazer%20meu%20Ensaio%20Digital%20com%20IA%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero meu ensaio — chamar no WhatsApp</a>
+        <a class="btn btn-whats btn-grande" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20fazer%20meu%20Ensaio%20Digital%20com%20IA%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero meu ensaio no WhatsApp</a>
         <p class="micro">Atendimento todos os dias, pelo WhatsApp. Escolha o tema, envie sua selfie e receba suas fotos.</p>
       </div>
       <div class="hero-foto">
         <img src="assets/aniversario.webp" alt="Mulher sorrindo em ensaio fotográfico de aniversário com bolo rosa e dourado e balões" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- DORES / DESEJO -->
+  <section class="dores">
+    <div class="wrap">
+      <h2>Você também sente isso?</h2>
+      <p class="lead">A maioria das nossas clientes chegava com uma destas frases:</p>
+      <div class="dores-grid">
+        <div class="dor">“Meu aniversário está chegando e eu <strong>não tenho nenhuma foto bonita</strong> para postar…”</div>
+        <div class="dor">“Minha foto de perfil é antiga e <strong>não mostra a profissional que eu sou hoje</strong>.”</div>
+        <div class="dor">“Eu evito foto porque <strong>nunca saio bem</strong> — e ensaio em estúdio é caro e dá um trabalhão.”</div>
+      </div>
+      <p class="dores-fecha">Não é falta de beleza. É falta de um ensaio à sua altura — e ele começa com uma selfie.</p>
+      <div class="dores-cta">
+        <a class="btn btn-whats btn-grande" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20fazer%20meu%20Ensaio%20Digital%20com%20IA%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero minhas fotos dos sonhos</a>
       </div>
     </div>
   </section>
@@ -208,11 +235,11 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
       <div class="tema-grid">
         <article class="tema">
           <img src="assets/aniversario.webp" alt="Ensaio de aniversário com bolo rosa e dourado e balões" loading="lazy">
-          <div><h3>🎂 Aniversário</h3><p>O queridinho: celebre seu dia com fotos dignas de capa de revista.</p></div>
+          <div><h3>🎂 Aniversário</h3><p>O mais pedido: seu dia eternizado em fotos dignas de capa de revista, sem precisar de estúdio.</p></div>
         </article>
         <article class="tema">
           <img src="assets/corporativo.webp" alt="Ensaio corporativo com blazer rosa em estúdio" loading="lazy">
-          <div><h3>💼 Corporativo</h3><p>Sua imagem profissional para LinkedIn, currículo e redes da empresa.</p></div>
+          <div><h3>💼 Corporativo</h3><p>Credibilidade em cada foto: LinkedIn, currículo e perfil da empresa com qualidade de estúdio real.</p></div>
         </article>
         <article class="tema">
           <img src="assets/casal.webp" alt="Ensaio de casal abraçado em estúdio com luzes douradas" loading="lazy">
@@ -236,13 +263,15 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
         <article class="pacote">
           <div class="qtd">1 foto</div>
           <div class="preco">R$ 9,90</div>
-          <p class="detalhe">Para experimentar o ensaio e se apaixonar pelo resultado.</p>
+          <p class="porfoto">para experimentar</p>
+          <p class="detalhe">Para conhecer o ensaio e se apaixonar pelo resultado.</p>
           <a class="btn btn-whats" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20o%20pacote%20de%201%20foto%20(R%24%209%2C90)%20do%20Ensaio%20Digital%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero este</a>
         </article>
 
         <article class="pacote">
           <div class="qtd">3 fotos</div>
           <div class="preco">R$ 19,90</div>
+          <p class="porfoto">R$ 6,63 por foto</p>
           <p class="detalhe">Um mini ensaio com três poses do mesmo tema.</p>
           <a class="btn btn-whats" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20o%20pacote%20de%203%20fotos%20(R%24%2019%2C90)%20do%20Ensaio%20Digital%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero este</a>
         </article>
@@ -251,6 +280,7 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
           <span class="tag">⭐ MAIS PEDIDO</span>
           <div class="qtd">10 fotos</div>
           <div class="preco">R$ 49,90</div>
+          <p class="porfoto">R$ 4,99 por foto</p>
           <p class="detalhe">O ensaio completo: dez fotos profissionais do seu tema favorito.</p>
           <a class="btn btn-whats" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20o%20pacote%20de%2010%20fotos%20(R%24%2049%2C90)%20do%20Ensaio%20Digital%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero este</a>
         </article>
@@ -258,6 +288,7 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
         <article class="pacote">
           <div class="qtd">15 fotos</div>
           <div class="preco">R$ 69,90</div>
+          <p class="porfoto">R$ 4,66 por foto</p>
           <p class="detalhe">Mais poses e variações para arrasar nas redes sociais.</p>
           <a class="btn btn-whats" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20o%20pacote%20de%2015%20fotos%20(R%24%2069%2C90)%20do%20Ensaio%20Digital%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero este</a>
         </article>
@@ -265,6 +296,7 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
         <article class="pacote">
           <div class="qtd">20 fotos</div>
           <div class="preco">R$ 79,90</div>
+          <p class="porfoto">menos de R$ 4,00 por foto</p>
           <p class="detalhe">O ensaio máximo: vinte fotos para você escolher as melhores.</p>
           <a class="btn btn-whats" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20o%20pacote%20de%2020%20fotos%20(R%24%2079%2C90)%20do%20Ensaio%20Digital%20%F0%9F%93%B8" target="_blank" rel="noopener">Quero este</a>
         </article>
@@ -279,6 +311,10 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
     <div class="wrap">
       <h2>Perguntas frequentes</h2>
       <p class="lead">Tudo o que você precisa saber antes de fazer o seu.</p>
+      <details>
+        <summary>As fotos ficam naturais, parecendo um ensaio de verdade?</summary>
+        <p>Sim. O ensaio é gerado a partir das suas próprias fotos, mantendo o seu rosto e as suas características, com cenário, luz e produção de estúdio profissional. É você, na sua melhor versão.</p>
+      </details>
       <details>
         <summary>Preciso ir a um estúdio fotográfico?</summary>
         <p>Não! É 100% online. Você envia suas fotos pelo WhatsApp e recebe o ensaio pronto, sem sair de casa.</p>
@@ -305,8 +341,8 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
   <!-- CTA FINAL -->
   <section class="cta-final">
     <div class="wrap">
-      <h2>Pronta para o seu ensaio dos sonhos?</h2>
-      <p>Chame agora no WhatsApp e escolha seu tema. Seu ensaio começa com uma selfie.</p>
+      <h2>Seu próximo ensaio começa com 1 selfie</h2>
+      <p>Seu aniversário, sua nova fase, sua imagem profissional: você merece fotos à sua altura. Chame agora no WhatsApp e escolha o seu tema.</p>
       <a class="btn btn-whats btn-grande" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20fazer%20meu%20Ensaio%20Digital%20com%20IA%20%F0%9F%93%B8" target="_blank" rel="noopener">Chamar no WhatsApp</a>
     </div>
   </section>
