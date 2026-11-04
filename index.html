@@ -119,10 +119,28 @@ h2{font-family:'Playfair Display',serif;font-size:1.9rem;text-align:center;margi
 .faq summary{font-weight:700;cursor:pointer;min-height:28px}
 .faq details p{color:var(--cinza);margin-top:8px;font-size:.95rem}
 
+/* Comparativo */
+.compare{background:#fff}
+.compare-grid{display:grid;gap:18px}
+.compare-card{border-radius:var(--raio);padding:24px;border:1px solid var(--rosa-suave);background:#fff}
+.compare-card.fun{border:2px solid var(--dourado);background:var(--rosa-fundo);box-shadow:var(--sombra)}
+.compare-card h3{font-size:1.05rem;margin-bottom:12px;text-align:center}
+.compare-card ul{list-style:none;display:grid;gap:9px;font-size:.96rem}
+.compare-card li::before{content:"✕ ";color:#B0492F;font-weight:800}
+.compare-card.fun li::before{content:"✓ ";color:var(--verde);font-weight:800}
+@media(min-width:760px){.compare-grid{grid-template-columns:1fr 1fr}}
+
+/* O que inclui */
+.inclui{max-width:760px;margin:0 auto 28px;background:var(--rosa-fundo);border:1px solid var(--rosa-suave);border-radius:var(--raio);padding:20px 24px}
+.inclui h3{text-align:center;font-size:1rem;margin-bottom:12px;color:var(--rose-escuro)}
+.inclui ul{list-style:none;display:grid;gap:8px;font-weight:600;font-size:.96rem}
+.inclui li::before{content:"✓ ";color:var(--verde);font-weight:800}
+@media(min-width:760px){.inclui ul{grid-template-columns:1fr 1fr}}
+
 /* CTA final */
-.cta-final{text-align:center}
-.cta-final h2{margin-bottom:12px}
-.cta-final p{color:var(--cinza);margin-bottom:24px}
+.cta-final{text-align:center;background:var(--vinho)}
+.cta-final h2{margin-bottom:12px;color:#fff}
+.cta-final p{color:#F3D9DF;margin-bottom:24px}
 
 footer{background:var(--vinho);color:#F3D9DF;text-align:center;padding:28px 20px;font-size:.88rem}
 footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;margin-bottom:6px}
@@ -180,16 +198,16 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
         <p class="micro">Atendimento todos os dias, pelo WhatsApp. Escolha o tema, envie sua selfie e receba suas fotos.</p>
       </div>
       <div class="hero-foto">
-        <img src="assets/prata48.webp" alt="Mulher sorrindo em ensaio fotográfico de aniversário com bolo rosa e dourado e balões" fetchpriority="high">
+        <img src="assets/hero-prata63.webp" alt="Mulher madura deslumbrante em ensaio editorial prata e preto, segurando bolo com vela de faísca entre balões prateados" fetchpriority="high">
       </div>
     </div>
   </section>
 
-  <!-- CENARIOS --> <section class="cenarios"> <div class="wrap"> <h2>Cenários para você escolher</h2> <p class="lead">Escolha o cenário do seu ensaio — cada um vira fotos dignas de capa de revista.</p> <div class="cenarios-grid"> <figure class="cenario"><img src="assets/prata48.webp" alt="Ensaio de aniversário editorial em prata e preto" loading="lazy"><figcaption>Prata &amp; Preto — editorial</figcaption></figure> <figure class="cenario"><img src="assets/rosa50.webp" alt="Ensaio de aniversário em rosa e branco" loading="lazy"><figcaption>Rosa &amp; Branco — aniversário</figcaption></figure> <figure class="cenario"><img src="assets/branco50.webp" alt="Ensaio minimalista em branco" loading="lazy"><figcaption>Branco minimalista</figcaption></figure> <figure class="cenario"><img src="assets/praia54.webp" alt="Ensaio ao pôr do sol na praia" loading="lazy"><figcaption>Pôr do sol na praia</figcaption></figure> <figure class="cenario"><img src="assets/corp45.webp" alt="Ensaio corporativo elegante" loading="lazy"><figcaption>Corporativo elegante</figcaption></figure> <figure class="cenario"><img src="assets/casal.webp" alt="Ensaio de casal" loading="lazy"><figcaption>Casal</figcaption></figure> </div> </div> </section> <!-- DORES / DESEJO -->
+  <!-- CENARIOS --> <section class="cenarios"> <div class="wrap"> <h2>Cenários para você escolher</h2> <p class="lead">Escolha o cenário do seu ensaio — cada um vira fotos dignas de capa de revista.</p> <div class="cenarios-grid"> <figure class="cenario"><img src="assets/prata48.webp" alt="Ensaio de aniversário editorial em prata e preto" loading="lazy"><figcaption>Prata &amp; Preto — editorial</figcaption></figure> <figure class="cenario"><img src="assets/rosa50.webp" alt="Ensaio de aniversário em rosa e branco" loading="lazy"><figcaption>Rosa &amp; Branco — aniversário</figcaption></figure> <figure class="cenario"><img src="assets/branco-novo.webp" alt="Ensaio minimalista em branco" loading="lazy"><figcaption>Branco minimalista</figcaption></figure> <figure class="cenario"><img src="assets/praia54.webp" alt="Ensaio ao pôr do sol na praia" loading="lazy"><figcaption>Pôr do sol na praia</figcaption></figure> <figure class="cenario"><img src="assets/corp45.webp" alt="Ensaio corporativo elegante" loading="lazy"><figcaption>Corporativo elegante</figcaption></figure> <figure class="cenario"><img src="assets/cenario-rosegold.webp" alt="Mulher sorrindo em ensaio rose gold segurando vela de faísca" loading="lazy"><figcaption>Rose Gold — primeiro ensaio</figcaption></figure> </div> </div> </section> <!-- DORES / DESEJO -->
   <section class="dores">
     <div class="wrap">
       <h2>Você também sente isso?</h2>
-      <p class="lead">A maioria das nossas clientes chegava com uma destas frases:</p>
+      <p class="lead">Frases que quase toda mulher já pensou diante do espelho:</p>
       <div class="dores-grid">
         <div class="dor">“Meu aniversário está chegando e eu <strong>não tenho nenhuma foto bonita</strong> para postar…”</div>
         <div class="dor">“Minha foto de perfil é antiga e <strong>não mostra a profissional que eu sou hoje</strong>.”</div>
@@ -227,6 +245,34 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
     </div>
   </section>
 
+  <!-- COMPARATIVO -->
+  <section class="compare">
+    <div class="wrap">
+      <h2>Por que não um estúdio tradicional?</h2>
+      <p class="lead">O resultado é de estúdio. O caminho até ele é que mudou — para muito melhor.</p>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>📷 Estúdio tradicional</h3>
+          <ul>
+            <li>Agendar com dias de antecedência e se deslocar até o estúdio</li>
+            <li>Maquiagem, cabelo e produção por sua conta</li>
+            <li>Posar para um fotógrafo que você nunca viu</li>
+            <li>Esperar dias para ver as fotos — e pagar caro por cada uma</li>
+          </ul>
+        </div>
+        <div class="compare-card fun">
+          <h3>💗 Feminina.fun</h3>
+          <ul>
+            <li>Tudo pelo WhatsApp, sem sair de casa</li>
+            <li>Você envia suas fotos pelo celular — a produção é por nossa conta</li>
+            <li>Sem fotógrafo e sem constrangimento: no seu tempo, do seu jeito</li>
+            <li>Você escolhe as poses pelo catálogo, pelo número, e recebe no WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- TEMAS -->
   <section class="temas">
     <div class="wrap">
@@ -234,11 +280,11 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
       <p class="lead">Um ensaio para cada momento da sua vida — escolha o seu favorito.</p>
       <div class="tema-grid">
         <article class="tema">
-          <img src="assets/aniversario.webp" alt="Ensaio de aniversário com bolo rosa e dourado e balões" loading="lazy">
+          <img src="assets/tema-aniv-rosas.webp" alt="Mulher de 50 anos sorrindo ao lado de um número 50 feito de rosas, segurando bolo de aniversário" loading="lazy">
           <div><h3>🎂 Aniversário</h3><p>O mais pedido: seu dia eternizado em fotos dignas de capa de revista, sem precisar de estúdio.</p></div>
         </article>
         <article class="tema">
-          <img src="assets/corporativo.webp" alt="Ensaio corporativo com blazer rosa em estúdio" loading="lazy">
+          <img src="assets/corp45.webp" alt="Ensaio corporativo elegante em estúdio" loading="lazy">
           <div><h3>💼 Corporativo</h3><p>Credibilidade em cada foto: LinkedIn, currículo e perfil da empresa com qualidade de estúdio real.</p></div>
         </article>
         <article class="tema">
@@ -246,8 +292,8 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
           <div><h3>💑 Casal</h3><p>Registre o amor de vocês com fotos românticas e sofisticadas.</p></div>
         </article>
         <article class="tema">
-          <img src="assets/natal.webp" alt="Ensaio de Natal em família com árvore dourada" loading="lazy">
-          <div><h3>🎄 Natal e Família</h3><p>Fotos festivas com quem você ama, para guardar e compartilhar.</p></div>
+          <img src="assets/tema-natal-novo.webp" alt="Mulher madura elegante em ensaio de Natal, segurando uma caixinha de presente dourada" loading="lazy">
+          <div><h3>🎄 Natal</h3><p>Sua foto de Natal deslumbrante, sem reunir todo mundo em um estúdio — e ainda vira um presente inesquecível.</p></div>
         </article>
       </div>
     </div>
@@ -258,6 +304,15 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
     <div class="wrap">
       <h2>Escolha seu pacote</h2>
       <p class="lead">Valores únicos, sem mensalidade. Toque no pacote que você quer e finalize pelo WhatsApp.</p>
+      <div class="inclui">
+        <h3>Todo pacote inclui</h3>
+        <ul>
+          <li>Fotos em alta qualidade, prontas para postar</li>
+          <li>Escolha das poses pelo catálogo numerado</li>
+          <li>Cenário completo: luz, roupa e produção de estúdio</li>
+          <li>Atendimento humano no WhatsApp, do início à entrega</li>
+        </ul>
+      </div>
       <div class="pacotes-grid">
 
         <article class="pacote">
@@ -335,6 +390,14 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
         <summary>Como recebo minhas fotos?</summary>
         <p>Direto no seu WhatsApp, em alta qualidade, prontas para postar nas redes sociais ou guardar de lembrança.</p>
       </details>
+      <details>
+        <summary>Posso dar um ensaio de presente para alguém?</summary>
+        <p>Pode — e é um presente que emociona. Vale para sua mãe, sua filha adulta, uma amiga ou aquela mulher que vive cuidando de todo mundo e nunca se coloca em primeiro lugar. Chame no WhatsApp que o atendimento organiza tudo com você.</p>
+      </details>
+      <details>
+        <summary>Tenho vergonha e não sei mexer muito no celular. Consigo fazer?</summary>
+        <p>Consegue. Você não posa para ninguém e não precisa entender de tecnologia: o atendimento te guia passo a passo pelo WhatsApp, com calma, até suas fotos ficarem prontas.</p>
+      </details>
     </div>
   </section>
 
@@ -342,7 +405,7 @@ footer .fbrand{font-family:'Playfair Display',serif;font-size:1.2rem;color:#fff;
   <section class="cta-final">
     <div class="wrap">
       <h2>Seu próximo ensaio começa com 1 selfie</h2>
-      <p>Seu aniversário, sua nova fase, sua imagem profissional: você merece fotos à sua altura. Chame agora no WhatsApp e escolha o seu tema.</p>
+      <p>Faltam 51 dias para o Natal — e o seu aniversário não espera. Sua nova fase merece fotos à sua altura: chame agora no WhatsApp e escolha o seu tema.</p>
       <a class="btn btn-whats btn-grande" href="https://wa.me/556282473950?text=Ol%C3%A1!%20Quero%20fazer%20meu%20Ensaio%20Digital%20com%20IA%20%F0%9F%93%B8" target="_blank" rel="noopener">Chamar no WhatsApp</a>
     </div>
   </section>
