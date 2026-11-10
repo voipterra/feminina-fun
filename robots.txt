@@ -1,0 +1,45 @@
+# robots.txt — Feminina.fun
+# Acesso liberado para buscadores e para os robôs das IAs (ChatGPT, Claude,
+# Perplexity, Gemini/Google, Meta AI etc.), para a landing ser encontrada e
+# citada quando alguém perguntar por ensaio fotográfico com IA.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+Sitemap: https://feminina.fun/sitemap.xml
