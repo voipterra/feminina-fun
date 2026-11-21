@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo Corporativo · Feminina.fun</title>
+<meta name="description" content="Catálogo Corporativo da Feminina.fun: escolha os números das suas fotos e envie a lista no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3A2430;--blush:#F3D9DF;--blush2:#FBEDEF;--pink:#E9A7B8;--gold:#C9A227;--ink:#2b2b2b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--plum);color:#fff;padding:18px 16px;text-align:center}
+header .brand{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:.5px}
+header .brand b{color:var(--pink);font-weight:700}
+header p{font-size:13px;opacity:.85;margin-top:4px}
+main{max-width:1080px;margin:0 auto;padding:20px 14px 110px}
+h1{font-family:'Playfair Display',serif;font-size:30px;color:var(--plum);text-align:center;margin:8px 0 4px}
+.sub{text-align:center;color:#666;font-size:15px;margin-bottom:16px}
+.passos{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0 20px}
+.passos span{background:var(--blush2);border:1px solid var(--blush);border-radius:999px;padding:7px 12px;font-size:13px}
+h2.secao{font-family:'Playfair Display',serif;color:var(--plum);font-size:22px;margin:22px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{position:relative;border-radius:14px;overflow:hidden;border:3px solid transparent;cursor:pointer;background:#f6f6f6}
+.card img{width:100%;display:block;aspect-ratio:9/16;object-fit:cover}
+.card .num{position:absolute;left:8px;bottom:8px;background:rgba(58,36,48,.88);color:#fff;font-weight:700;font-size:14px;padding:5px 10px;border-radius:999px}
+.card .ver{position:absolute;right:8px;top:8px;background:rgba(255,255,255,.92);border:none;border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer}
+.card.sel{border-color:var(--gold)}
+.card.sel::after{content:'✓';position:absolute;right:8px;bottom:8px;background:var(--gold);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px}
+.barra{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #e7d7dc;box-shadow:0 -4px 18px rgba(58,36,48,.12);padding:10px 12px;z-index:40}
+.barra .linha{max-width:1080px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.conta{font-weight:700;color:var(--plum);font-size:14px;margin-right:auto}
+.btn{border:none;border-radius:999px;padding:12px 16px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa.off{background:#c9c9c9;pointer-events:none}
+.btn-alt{background:var(--blush2);color:var(--plum);border:1px solid var(--pink)}
+footer{text-align:center;color:#888;font-size:12px;padding:18px}
+#lightbox{position:fixed;inset:0;background:rgba(20,10,16,.92);display:none;align-items:center;justify-content:center;z-index:60;flex-direction:column;gap:10px}
+#lightbox img{max-height:82vh;max-width:94vw;border-radius:10px}
+#lightbox .fechar{color:#fff;background:transparent;border:1px solid #fff;border-radius:999px;padding:8px 18px;cursor:pointer}
+#gate{position:fixed;inset:0;background:rgba(58,36,48,.97);z-index:80;display:flex;align-items:center;justify-content:center;padding:20px}
+#gate .caixa{background:#fff;border-radius:16px;max-width:420px;padding:26px;text-align:center}
+#gate h2{font-family:'Playfair Display',serif;color:var(--plum);margin-bottom:8px}
+#gate p{font-size:14px;color:#555;margin-bottom:16px}
+.voltar{display:inline-block;margin:6px 0 0;color:var(--plum);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:800px){.cards{grid-template-columns:repeat(4,1fr)}}
+.cat{display:block;text-decoration:none;color:inherit;border-radius:14px;overflow:hidden;border:1px solid #ecd9de;background:#fff}
+.cat img{width:100%;display:block;aspect-ratio:9/16;object-fit:cover}
+.cat .t{padding:10px 12px}
+.cat .t b{font-family:'Playfair Display',serif;color:var(--plum);font-size:17px;display:block}
+.cat .t span{font-size:12px;color:#777}
+.badge18{background:#8e2f45;color:#fff;font-size:11px;border-radius:6px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+</style>
+</head>
+<body data-tema="Corporativo" data-prefixo="CORP_F">
+
+<header><div class="brand">Feminina<b>.fun</b></div><p>Ensaio Digital com IA</p></header>
+<main>
+<a class="voltar" href="index.html">← Todos os catálogos</a>
+<h1>Corporativo</h1>
+<p class="sub">Retratos profissionais que impõem respeito · 50 cenários</p>
+<div class="passos"><span>1 · Toque nas fotos que você amou</span><span>2 · Confira a sua lista aqui embaixo</span><span>3 · Envie no WhatsApp</span></div>
+<div class="grid"><div class="card" data-num="001" data-full="img/CORP_F-001-g.jpg">
+<img loading="lazy" src="img/CORP_F-001.jpg" alt="Ensaio Corporativo 001">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 001</span></div><div class="card" data-num="002" data-full="img/CORP_F-002-g.jpg">
+<img loading="lazy" src="img/CORP_F-002.jpg" alt="Ensaio Corporativo 002">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 002</span></div><div class="card" data-num="003" data-full="img/CORP_F-003-g.jpg">
+<img loading="lazy" src="img/CORP_F-003.jpg" alt="Ensaio Corporativo 003">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 003</span></div><div class="card" data-num="004" data-full="img/CORP_F-004-g.jpg">
+<img loading="lazy" src="img/CORP_F-004.jpg" alt="Ensaio Corporativo 004">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 004</span></div><div class="card" data-num="005" data-full="img/CORP_F-005-g.jpg">
+<img loading="lazy" src="img/CORP_F-005.jpg" alt="Ensaio Corporativo 005">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 005</span></div><div class="card" data-num="006" data-full="img/CORP_F-006-g.jpg">
+<img loading="lazy" src="img/CORP_F-006.jpg" alt="Ensaio Corporativo 006">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 006</span></div><div class="card" data-num="007" data-full="img/CORP_F-007-g.jpg">
+<img loading="lazy" src="img/CORP_F-007.jpg" alt="Ensaio Corporativo 007">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 007</span></div><div class="card" data-num="008" data-full="img/CORP_F-008-g.jpg">
+<img loading="lazy" src="img/CORP_F-008.jpg" alt="Ensaio Corporativo 008">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 008</span></div><div class="card" data-num="009" data-full="img/CORP_F-009-g.jpg">
+<img loading="lazy" src="img/CORP_F-009.jpg" alt="Ensaio Corporativo 009">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 009</span></div><div class="card" data-num="010" data-full="img/CORP_F-010-g.jpg">
+<img loading="lazy" src="img/CORP_F-010.jpg" alt="Ensaio Corporativo 010">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 010</span></div><div class="card" data-num="011" data-full="img/CORP_F-011-g.jpg">
+<img loading="lazy" src="img/CORP_F-011.jpg" alt="Ensaio Corporativo 011">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 011</span></div><div class="card" data-num="012" data-full="img/CORP_F-012-g.jpg">
+<img loading="lazy" src="img/CORP_F-012.jpg" alt="Ensaio Corporativo 012">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 012</span></div><div class="card" data-num="013" data-full="img/CORP_F-013-g.jpg">
+<img loading="lazy" src="img/CORP_F-013.jpg" alt="Ensaio Corporativo 013">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 013</span></div><div class="card" data-num="014" data-full="img/CORP_F-014-g.jpg">
+<img loading="lazy" src="img/CORP_F-014.jpg" alt="Ensaio Corporativo 014">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 014</span></div><div class="card" data-num="015" data-full="img/CORP_F-015-g.jpg">
+<img loading="lazy" src="img/CORP_F-015.jpg" alt="Ensaio Corporativo 015">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 015</span></div><div class="card" data-num="016" data-full="img/CORP_F-016-g.jpg">
+<img loading="lazy" src="img/CORP_F-016.jpg" alt="Ensaio Corporativo 016">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 016</span></div><div class="card" data-num="017" data-full="img/CORP_F-017-g.jpg">
+<img loading="lazy" src="img/CORP_F-017.jpg" alt="Ensaio Corporativo 017">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 017</span></div><div class="card" data-num="018" data-full="img/CORP_F-018-g.jpg">
+<img loading="lazy" src="img/CORP_F-018.jpg" alt="Ensaio Corporativo 018">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 018</span></div><div class="card" data-num="019" data-full="img/CORP_F-019-g.jpg">
+<img loading="lazy" src="img/CORP_F-019.jpg" alt="Ensaio Corporativo 019">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 019</span></div><div class="card" data-num="020" data-full="img/CORP_F-020-g.jpg">
+<img loading="lazy" src="img/CORP_F-020.jpg" alt="Ensaio Corporativo 020">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 020</span></div><div class="card" data-num="021" data-full="img/CORP_F-021-g.jpg">
+<img loading="lazy" src="img/CORP_F-021.jpg" alt="Ensaio Corporativo 021">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 021</span></div><div class="card" data-num="022" data-full="img/CORP_F-022-g.jpg">
+<img loading="lazy" src="img/CORP_F-022.jpg" alt="Ensaio Corporativo 022">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 022</span></div><div class="card" data-num="023" data-full="img/CORP_F-023-g.jpg">
+<img loading="lazy" src="img/CORP_F-023.jpg" alt="Ensaio Corporativo 023">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 023</span></div><div class="card" data-num="024" data-full="img/CORP_F-024-g.jpg">
+<img loading="lazy" src="img/CORP_F-024.jpg" alt="Ensaio Corporativo 024">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 024</span></div><div class="card" data-num="025" data-full="img/CORP_F-025-g.jpg">
+<img loading="lazy" src="img/CORP_F-025.jpg" alt="Ensaio Corporativo 025">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 025</span></div><div class="card" data-num="026" data-full="img/CORP_F-026-g.jpg">
+<img loading="lazy" src="img/CORP_F-026.jpg" alt="Ensaio Corporativo 026">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 026</span></div><div class="card" data-num="027" data-full="img/CORP_F-027-g.jpg">
+<img loading="lazy" src="img/CORP_F-027.jpg" alt="Ensaio Corporativo 027">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 027</span></div><div class="card" data-num="028" data-full="img/CORP_F-028-g.jpg">
+<img loading="lazy" src="img/CORP_F-028.jpg" alt="Ensaio Corporativo 028">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 028</span></div><div class="card" data-num="029" data-full="img/CORP_F-029-g.jpg">
+<img loading="lazy" src="img/CORP_F-029.jpg" alt="Ensaio Corporativo 029">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 029</span></div><div class="card" data-num="030" data-full="img/CORP_F-030-g.jpg">
+<img loading="lazy" src="img/CORP_F-030.jpg" alt="Ensaio Corporativo 030">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 030</span></div><div class="card" data-num="031" data-full="img/CORP_F-031-g.jpg">
+<img loading="lazy" src="img/CORP_F-031.jpg" alt="Ensaio Corporativo 031">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 031</span></div><div class="card" data-num="032" data-full="img/CORP_F-032-g.jpg">
+<img loading="lazy" src="img/CORP_F-032.jpg" alt="Ensaio Corporativo 032">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 032</span></div><div class="card" data-num="033" data-full="img/CORP_F-033-g.jpg">
+<img loading="lazy" src="img/CORP_F-033.jpg" alt="Ensaio Corporativo 033">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 033</span></div><div class="card" data-num="034" data-full="img/CORP_F-034-g.jpg">
+<img loading="lazy" src="img/CORP_F-034.jpg" alt="Ensaio Corporativo 034">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 034</span></div><div class="card" data-num="035" data-full="img/CORP_F-035-g.jpg">
+<img loading="lazy" src="img/CORP_F-035.jpg" alt="Ensaio Corporativo 035">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 035</span></div><div class="card" data-num="036" data-full="img/CORP_F-036-g.jpg">
+<img loading="lazy" src="img/CORP_F-036.jpg" alt="Ensaio Corporativo 036">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 036</span></div><div class="card" data-num="037" data-full="img/CORP_F-037-g.jpg">
+<img loading="lazy" src="img/CORP_F-037.jpg" alt="Ensaio Corporativo 037">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 037</span></div><div class="card" data-num="038" data-full="img/CORP_F-038-g.jpg">
+<img loading="lazy" src="img/CORP_F-038.jpg" alt="Ensaio Corporativo 038">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 038</span></div><div class="card" data-num="039" data-full="img/CORP_F-039-g.jpg">
+<img loading="lazy" src="img/CORP_F-039.jpg" alt="Ensaio Corporativo 039">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 039</span></div><div class="card" data-num="040" data-full="img/CORP_F-040-g.jpg">
+<img loading="lazy" src="img/CORP_F-040.jpg" alt="Ensaio Corporativo 040">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 040</span></div><div class="card" data-num="041" data-full="img/CORP_F-041-g.jpg">
+<img loading="lazy" src="img/CORP_F-041.jpg" alt="Ensaio Corporativo 041">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 041</span></div><div class="card" data-num="042" data-full="img/CORP_F-042-g.jpg">
+<img loading="lazy" src="img/CORP_F-042.jpg" alt="Ensaio Corporativo 042">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 042</span></div><div class="card" data-num="043" data-full="img/CORP_F-043-g.jpg">
+<img loading="lazy" src="img/CORP_F-043.jpg" alt="Ensaio Corporativo 043">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 043</span></div><div class="card" data-num="044" data-full="img/CORP_F-044-g.jpg">
+<img loading="lazy" src="img/CORP_F-044.jpg" alt="Ensaio Corporativo 044">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 044</span></div><div class="card" data-num="045" data-full="img/CORP_F-045-g.jpg">
+<img loading="lazy" src="img/CORP_F-045.jpg" alt="Ensaio Corporativo 045">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 045</span></div><div class="card" data-num="046" data-full="img/CORP_F-046-g.jpg">
+<img loading="lazy" src="img/CORP_F-046.jpg" alt="Ensaio Corporativo 046">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 046</span></div><div class="card" data-num="047" data-full="img/CORP_F-047-g.jpg">
+<img loading="lazy" src="img/CORP_F-047.jpg" alt="Ensaio Corporativo 047">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 047</span></div><div class="card" data-num="048" data-full="img/CORP_F-048-g.jpg">
+<img loading="lazy" src="img/CORP_F-048.jpg" alt="Ensaio Corporativo 048">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 048</span></div><div class="card" data-num="049" data-full="img/CORP_F-049-g.jpg">
+<img loading="lazy" src="img/CORP_F-049.jpg" alt="Ensaio Corporativo 049">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 049</span></div><div class="card" data-num="050" data-full="img/CORP_F-050-g.jpg">
+<img loading="lazy" src="img/CORP_F-050.jpg" alt="Ensaio Corporativo 050">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 050</span></div></div>
+</main>
+<div class="barra"><div class="linha">
+<span class="conta" id="conta">Nenhuma foto escolhida ainda</span>
+<a class="btn btn-alt" id="escolhem" target="_blank" rel="noopener">Prefiro que escolham por mim</a>
+<a class="btn btn-wa off" id="enviar" target="_blank" rel="noopener">Enviar minha lista no WhatsApp</a>
+</div></div>
+<div id="lightbox"><img id="lbimg" alt="Foto ampliada"><button class="fechar" onclick="document.getElementById('lightbox').style.display='none'">Fechar</button></div>
+<footer>Feminina.fun · Ensaio Digital com IA · Atendimento no WhatsApp</footer>
+<script>
+const sel = new Set();
+const tema = document.body.dataset.tema;
+const prefixo = document.body.dataset.prefixo;
+function codigos(){ return [...sel].sort().map(n => prefixo + ' ' + n); }
+function atualizar(){
+  document.getElementById('conta').textContent = sel.size === 0 ? 'Nenhuma foto escolhida ainda' : sel.size + (sel.size === 1 ? ' foto escolhida' : ' fotos escolhidas');
+  const btn = document.getElementById('enviar');
+  if(sel.size === 0){ btn.classList.add('off'); btn.removeAttribute('href'); }
+  else { btn.classList.remove('off');
+    const msg = 'Olá! Vim pelo catálogo ' + tema + ' da Feminina.fun e escolhi estas fotos: ' + codigos().join(', ') + '.';
+    btn.href = 'https://wa.me/556282473950?text=' + encodeURIComponent(msg); }
+  document.querySelectorAll('.card').forEach(c => c.classList.toggle('sel', sel.has(c.dataset.num)));
+}
+document.querySelectorAll('.card').forEach(c => {
+  c.addEventListener('click', e => {
+    if(e.target.classList.contains('ver')) return;
+    const n = c.dataset.num;
+    sel.has(n) ? sel.delete(n) : sel.add(n);
+    atualizar();
+  });
+  c.querySelector('.ver').addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('lbimg').src = c.dataset.full;
+    document.getElementById('lightbox').style.display = 'flex';
+  });
+});
+document.getElementById('escolhem').href = 'https://wa.me/556282473950?text=' + encodeURIComponent('Olá! Vim pelo catálogo ' + tema + ' da Feminina.fun e prefiro que vocês escolham as fotos para mim.');
+atualizar();
+</script>
+</body>
+</html>

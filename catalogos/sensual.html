@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo Sensual · Feminina.fun</title>
+<meta name="description" content="Catálogo Sensual da Feminina.fun: escolha os números das suas fotos e envie a lista no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#3A2430;--blush:#F3D9DF;--blush2:#FBEDEF;--pink:#E9A7B8;--gold:#C9A227;--ink:#2b2b2b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:#fff}
+header{background:var(--plum);color:#fff;padding:18px 16px;text-align:center}
+header .brand{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:.5px}
+header .brand b{color:var(--pink);font-weight:700}
+header p{font-size:13px;opacity:.85;margin-top:4px}
+main{max-width:1080px;margin:0 auto;padding:20px 14px 110px}
+h1{font-family:'Playfair Display',serif;font-size:30px;color:var(--plum);text-align:center;margin:8px 0 4px}
+.sub{text-align:center;color:#666;font-size:15px;margin-bottom:16px}
+.passos{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0 20px}
+.passos span{background:var(--blush2);border:1px solid var(--blush);border-radius:999px;padding:7px 12px;font-size:13px}
+h2.secao{font-family:'Playfair Display',serif;color:var(--plum);font-size:22px;margin:22px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{position:relative;border-radius:14px;overflow:hidden;border:3px solid transparent;cursor:pointer;background:#f6f6f6}
+.card img{width:100%;display:block;aspect-ratio:9/16;object-fit:cover}
+.card .num{position:absolute;left:8px;bottom:8px;background:rgba(58,36,48,.88);color:#fff;font-weight:700;font-size:14px;padding:5px 10px;border-radius:999px}
+.card .ver{position:absolute;right:8px;top:8px;background:rgba(255,255,255,.92);border:none;border-radius:999px;padding:6px 10px;font-size:12px;cursor:pointer}
+.card.sel{border-color:var(--gold)}
+.card.sel::after{content:'✓';position:absolute;right:8px;bottom:8px;background:var(--gold);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px}
+.barra{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #e7d7dc;box-shadow:0 -4px 18px rgba(58,36,48,.12);padding:10px 12px;z-index:40}
+.barra .linha{max-width:1080px;margin:0 auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.conta{font-weight:700;color:var(--plum);font-size:14px;margin-right:auto}
+.btn{border:none;border-radius:999px;padding:12px 16px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa.off{background:#c9c9c9;pointer-events:none}
+.btn-alt{background:var(--blush2);color:var(--plum);border:1px solid var(--pink)}
+footer{text-align:center;color:#888;font-size:12px;padding:18px}
+#lightbox{position:fixed;inset:0;background:rgba(20,10,16,.92);display:none;align-items:center;justify-content:center;z-index:60;flex-direction:column;gap:10px}
+#lightbox img{max-height:82vh;max-width:94vw;border-radius:10px}
+#lightbox .fechar{color:#fff;background:transparent;border:1px solid #fff;border-radius:999px;padding:8px 18px;cursor:pointer}
+#gate{position:fixed;inset:0;background:rgba(58,36,48,.97);z-index:80;display:flex;align-items:center;justify-content:center;padding:20px}
+#gate .caixa{background:#fff;border-radius:16px;max-width:420px;padding:26px;text-align:center}
+#gate h2{font-family:'Playfair Display',serif;color:var(--plum);margin-bottom:8px}
+#gate p{font-size:14px;color:#555;margin-bottom:16px}
+.voltar{display:inline-block;margin:6px 0 0;color:var(--plum);font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:800px){.cards{grid-template-columns:repeat(4,1fr)}}
+.cat{display:block;text-decoration:none;color:inherit;border-radius:14px;overflow:hidden;border:1px solid #ecd9de;background:#fff}
+.cat img{width:100%;display:block;aspect-ratio:9/16;object-fit:cover}
+.cat .t{padding:10px 12px}
+.cat .t b{font-family:'Playfair Display',serif;color:var(--plum);font-size:17px;display:block}
+.cat .t span{font-size:12px;color:#777}
+.badge18{background:#8e2f45;color:#fff;font-size:11px;border-radius:6px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+</style>
+</head>
+<body data-tema="Sensual" data-prefixo="SENS">
+
+<div id="gate"><div class="caixa">
+<h2>Conteúdo adulto</h2>
+<p>Este catálogo tem fotos sensuais e é só para maiores de 18 anos. Você confirma que tem 18 anos ou mais?</p>
+<button class="btn btn-wa" onclick="document.getElementById('gate').remove();sessionStorage.setItem('sens18','1')">Sim, tenho 18+</button>
+<a class="btn btn-alt" href="index.html">Não, voltar</a>
+</div></div>
+<script>if(sessionStorage.getItem('sens18')==='1'){document.getElementById('gate').remove();}</script>
+
+<header><div class="brand">Feminina<b>.fun</b></div><p>Ensaio Digital com IA</p></header>
+<main>
+<a class="voltar" href="index.html">← Todos os catálogos</a>
+<h1>Sensual</h1>
+<p class="sub">Elegância e atitude, com bom gosto · 49 cenários</p>
+<div class="passos"><span>1 · Toque nas fotos que você amou</span><span>2 · Confira a sua lista aqui embaixo</span><span>3 · Envie no WhatsApp</span></div>
+<div class="grid"><div class="card" data-num="01" data-full="img/SENS-01-g.jpg">
+<img loading="lazy" src="img/SENS-01.jpg" alt="Ensaio Sensual 01">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 01</span></div><div class="card" data-num="02" data-full="img/SENS-02-g.jpg">
+<img loading="lazy" src="img/SENS-02.jpg" alt="Ensaio Sensual 02">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 02</span></div><div class="card" data-num="03" data-full="img/SENS-03-g.jpg">
+<img loading="lazy" src="img/SENS-03.jpg" alt="Ensaio Sensual 03">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 03</span></div><div class="card" data-num="04" data-full="img/SENS-04-g.jpg">
+<img loading="lazy" src="img/SENS-04.jpg" alt="Ensaio Sensual 04">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 04</span></div><div class="card" data-num="05" data-full="img/SENS-05-g.jpg">
+<img loading="lazy" src="img/SENS-05.jpg" alt="Ensaio Sensual 05">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 05</span></div><div class="card" data-num="06" data-full="img/SENS-06-g.jpg">
+<img loading="lazy" src="img/SENS-06.jpg" alt="Ensaio Sensual 06">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 06</span></div><div class="card" data-num="07" data-full="img/SENS-07-g.jpg">
+<img loading="lazy" src="img/SENS-07.jpg" alt="Ensaio Sensual 07">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 07</span></div><div class="card" data-num="08" data-full="img/SENS-08-g.jpg">
+<img loading="lazy" src="img/SENS-08.jpg" alt="Ensaio Sensual 08">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 08</span></div><div class="card" data-num="09" data-full="img/SENS-09-g.jpg">
+<img loading="lazy" src="img/SENS-09.jpg" alt="Ensaio Sensual 09">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 09</span></div><div class="card" data-num="10" data-full="img/SENS-10-g.jpg">
+<img loading="lazy" src="img/SENS-10.jpg" alt="Ensaio Sensual 10">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 10</span></div><div class="card" data-num="11" data-full="img/SENS-11-g.jpg">
+<img loading="lazy" src="img/SENS-11.jpg" alt="Ensaio Sensual 11">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 11</span></div><div class="card" data-num="12" data-full="img/SENS-12-g.jpg">
+<img loading="lazy" src="img/SENS-12.jpg" alt="Ensaio Sensual 12">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 12</span></div><div class="card" data-num="13" data-full="img/SENS-13-g.jpg">
+<img loading="lazy" src="img/SENS-13.jpg" alt="Ensaio Sensual 13">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 13</span></div><div class="card" data-num="14" data-full="img/SENS-14-g.jpg">
+<img loading="lazy" src="img/SENS-14.jpg" alt="Ensaio Sensual 14">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 14</span></div><div class="card" data-num="15" data-full="img/SENS-15-g.jpg">
+<img loading="lazy" src="img/SENS-15.jpg" alt="Ensaio Sensual 15">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 15</span></div><div class="card" data-num="16" data-full="img/SENS-16-g.jpg">
+<img loading="lazy" src="img/SENS-16.jpg" alt="Ensaio Sensual 16">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 16</span></div><div class="card" data-num="17" data-full="img/SENS-17-g.jpg">
+<img loading="lazy" src="img/SENS-17.jpg" alt="Ensaio Sensual 17">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 17</span></div><div class="card" data-num="18" data-full="img/SENS-18-g.jpg">
+<img loading="lazy" src="img/SENS-18.jpg" alt="Ensaio Sensual 18">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 18</span></div><div class="card" data-num="19" data-full="img/SENS-19-g.jpg">
+<img loading="lazy" src="img/SENS-19.jpg" alt="Ensaio Sensual 19">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 19</span></div><div class="card" data-num="20" data-full="img/SENS-20-g.jpg">
+<img loading="lazy" src="img/SENS-20.jpg" alt="Ensaio Sensual 20">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 20</span></div><div class="card" data-num="21" data-full="img/SENS-21-g.jpg">
+<img loading="lazy" src="img/SENS-21.jpg" alt="Ensaio Sensual 21">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 21</span></div><div class="card" data-num="22" data-full="img/SENS-22-g.jpg">
+<img loading="lazy" src="img/SENS-22.jpg" alt="Ensaio Sensual 22">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 22</span></div><div class="card" data-num="23" data-full="img/SENS-23-g.jpg">
+<img loading="lazy" src="img/SENS-23.jpg" alt="Ensaio Sensual 23">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 23</span></div><div class="card" data-num="24" data-full="img/SENS-24-g.jpg">
+<img loading="lazy" src="img/SENS-24.jpg" alt="Ensaio Sensual 24">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 24</span></div><div class="card" data-num="25" data-full="img/SENS-25-g.jpg">
+<img loading="lazy" src="img/SENS-25.jpg" alt="Ensaio Sensual 25">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 25</span></div><div class="card" data-num="26" data-full="img/SENS-26-g.jpg">
+<img loading="lazy" src="img/SENS-26.jpg" alt="Ensaio Sensual 26">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 26</span></div><div class="card" data-num="27" data-full="img/SENS-27-g.jpg">
+<img loading="lazy" src="img/SENS-27.jpg" alt="Ensaio Sensual 27">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 27</span></div><div class="card" data-num="28" data-full="img/SENS-28-g.jpg">
+<img loading="lazy" src="img/SENS-28.jpg" alt="Ensaio Sensual 28">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 28</span></div><div class="card" data-num="29" data-full="img/SENS-29-g.jpg">
+<img loading="lazy" src="img/SENS-29.jpg" alt="Ensaio Sensual 29">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 29</span></div><div class="card" data-num="30" data-full="img/SENS-30-g.jpg">
+<img loading="lazy" src="img/SENS-30.jpg" alt="Ensaio Sensual 30">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 30</span></div><div class="card" data-num="31" data-full="img/SENS-31-g.jpg">
+<img loading="lazy" src="img/SENS-31.jpg" alt="Ensaio Sensual 31">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 31</span></div><div class="card" data-num="32" data-full="img/SENS-32-g.jpg">
+<img loading="lazy" src="img/SENS-32.jpg" alt="Ensaio Sensual 32">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 32</span></div><div class="card" data-num="33" data-full="img/SENS-33-g.jpg">
+<img loading="lazy" src="img/SENS-33.jpg" alt="Ensaio Sensual 33">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 33</span></div><div class="card" data-num="34" data-full="img/SENS-34-g.jpg">
+<img loading="lazy" src="img/SENS-34.jpg" alt="Ensaio Sensual 34">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 34</span></div><div class="card" data-num="35" data-full="img/SENS-35-g.jpg">
+<img loading="lazy" src="img/SENS-35.jpg" alt="Ensaio Sensual 35">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 35</span></div><div class="card" data-num="36" data-full="img/SENS-36-g.jpg">
+<img loading="lazy" src="img/SENS-36.jpg" alt="Ensaio Sensual 36">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 36</span></div><div class="card" data-num="37" data-full="img/SENS-37-g.jpg">
+<img loading="lazy" src="img/SENS-37.jpg" alt="Ensaio Sensual 37">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 37</span></div><div class="card" data-num="38" data-full="img/SENS-38-g.jpg">
+<img loading="lazy" src="img/SENS-38.jpg" alt="Ensaio Sensual 38">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 38</span></div><div class="card" data-num="39" data-full="img/SENS-39-g.jpg">
+<img loading="lazy" src="img/SENS-39.jpg" alt="Ensaio Sensual 39">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 39</span></div><div class="card" data-num="40" data-full="img/SENS-40-g.jpg">
+<img loading="lazy" src="img/SENS-40.jpg" alt="Ensaio Sensual 40">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 40</span></div><div class="card" data-num="41" data-full="img/SENS-41-g.jpg">
+<img loading="lazy" src="img/SENS-41.jpg" alt="Ensaio Sensual 41">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 41</span></div><div class="card" data-num="42" data-full="img/SENS-42-g.jpg">
+<img loading="lazy" src="img/SENS-42.jpg" alt="Ensaio Sensual 42">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 42</span></div><div class="card" data-num="43" data-full="img/SENS-43-g.jpg">
+<img loading="lazy" src="img/SENS-43.jpg" alt="Ensaio Sensual 43">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 43</span></div><div class="card" data-num="44" data-full="img/SENS-44-g.jpg">
+<img loading="lazy" src="img/SENS-44.jpg" alt="Ensaio Sensual 44">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 44</span></div><div class="card" data-num="45" data-full="img/SENS-45-g.jpg">
+<img loading="lazy" src="img/SENS-45.jpg" alt="Ensaio Sensual 45">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 45</span></div><div class="card" data-num="46" data-full="img/SENS-46-g.jpg">
+<img loading="lazy" src="img/SENS-46.jpg" alt="Ensaio Sensual 46">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 46</span></div><div class="card" data-num="47" data-full="img/SENS-47-g.jpg">
+<img loading="lazy" src="img/SENS-47.jpg" alt="Ensaio Sensual 47">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 47</span></div><div class="card" data-num="48" data-full="img/SENS-48-g.jpg">
+<img loading="lazy" src="img/SENS-48.jpg" alt="Ensaio Sensual 48">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 48</span></div><div class="card" data-num="49" data-full="img/SENS-49-g.jpg">
+<img loading="lazy" src="img/SENS-49.jpg" alt="Ensaio Sensual 49">
+<button class="ver" type="button">ver maior</button>
+<span class="num">Nº 49</span></div></div>
+</main>
+<div class="barra"><div class="linha">
+<span class="conta" id="conta">Nenhuma foto escolhida ainda</span>
+<a class="btn btn-alt" id="escolhem" target="_blank" rel="noopener">Prefiro que escolham por mim</a>
+<a class="btn btn-wa off" id="enviar" target="_blank" rel="noopener">Enviar minha lista no WhatsApp</a>
+</div></div>
+<div id="lightbox"><img id="lbimg" alt="Foto ampliada"><button class="fechar" onclick="document.getElementById('lightbox').style.display='none'">Fechar</button></div>
+<footer>Feminina.fun · Ensaio Digital com IA · Atendimento no WhatsApp</footer>
+<script>
+const sel = new Set();
+const tema = document.body.dataset.tema;
+const prefixo = document.body.dataset.prefixo;
+function codigos(){ return [...sel].sort().map(n => prefixo + ' ' + n); }
+function atualizar(){
+  document.getElementById('conta').textContent = sel.size === 0 ? 'Nenhuma foto escolhida ainda' : sel.size + (sel.size === 1 ? ' foto escolhida' : ' fotos escolhidas');
+  const btn = document.getElementById('enviar');
+  if(sel.size === 0){ btn.classList.add('off'); btn.removeAttribute('href'); }
+  else { btn.classList.remove('off');
+    const msg = 'Olá! Vim pelo catálogo ' + tema + ' da Feminina.fun e escolhi estas fotos: ' + codigos().join(', ') + '.';
+    btn.href = 'https://wa.me/556282473950?text=' + encodeURIComponent(msg); }
+  document.querySelectorAll('.card').forEach(c => c.classList.toggle('sel', sel.has(c.dataset.num)));
+}
+document.querySelectorAll('.card').forEach(c => {
+  c.addEventListener('click', e => {
+    if(e.target.classList.contains('ver')) return;
+    const n = c.dataset.num;
+    sel.has(n) ? sel.delete(n) : sel.add(n);
+    atualizar();
+  });
+  c.querySelector('.ver').addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('lbimg').src = c.dataset.full;
+    document.getElementById('lightbox').style.display = 'flex';
+  });
+});
+document.getElementById('escolhem').href = 'https://wa.me/556282473950?text=' + encodeURIComponent('Olá! Vim pelo catálogo ' + tema + ' da Feminina.fun e prefiro que vocês escolham as fotos para mim.');
+atualizar();
+</script>
+</body>
+</html>
